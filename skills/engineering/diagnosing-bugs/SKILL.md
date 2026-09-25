@@ -127,6 +127,17 @@ If a correct seam exists:
 4. Watch it pass.
 5. Re-run the Phase 1 feedback loop against the original (un-minimised) scenario.
 
+### When a second fix fails the same loop — attack the premise
+
+Two failed fixes that share an assumption are evidence against the assumption, not against the fixes. **Do not write a third.**
+
+1. **Write the premise down** — the one sentence every failed fix assumed.
+2. **Take a census before the next fix.** Count the symptom per actor — worker, host, caller, session, input — with a script you can rerun, not a one-off look. The census shows _who_ holds the failure, not how much of it there is.
+3. **Read the skew.** If the same few actors hold most of it on every run, something assigns them that role; find what assigns it — that is the next "why".
+4. **Remove the asymmetry rather than compensate for it.** Rotate, randomise or move the role. A retry, a return path, a shared pool or a periodic rebalance leaves the assignment in place and adds work on every run.
+
+If the census is even across actors, the premise is not the cause: return to Phase 3 with the census as evidence.
+
 ## Phase 6 — Cleanup + post-mortem
 
 Required before declaring done:
