@@ -5,6 +5,10 @@
 #
 # Everything above the "STAGES" marker is the wizard library: do not hand-edit
 # it. Author the per-step stages below the marker.
+#
+# EPHEMERAL wizards keep this library inline, as below. A COMMITTED wizard lives in the
+# Box-Ops repo's deploy/cli/ and replaces the library with one line (hub#1058):
+#   . "$(dirname "$0")/wizard-lib.sh"
 
 set -euo pipefail
 
@@ -12,6 +16,10 @@ set -euo pipefail
 # Wizard library — delightful, consistent UX. Identical across every wizard.
 # ──────────────────────────────────────────────────────────────────────────
 
+# RED is part of the palette this library offers the stages below the STAGES marker; the library
+# itself happens to use only BLUE/GREEN/YELLOW. The directive sits above the whole if-compound
+# because SC2034 attaches to the compound, not to the branch that assigns.
+# shellcheck disable=SC2034
 if [[ -t 1 ]] && command -v tput >/dev/null 2>&1 && [[ "$(tput colors 2>/dev/null || echo 0)" -ge 8 ]]; then
   BOLD=$(tput bold); DIM=$(tput dim); RESET=$(tput sgr0)
   BLUE=$(tput setaf 4); GREEN=$(tput setaf 2); YELLOW=$(tput setaf 3); RED=$(tput setaf 1)
