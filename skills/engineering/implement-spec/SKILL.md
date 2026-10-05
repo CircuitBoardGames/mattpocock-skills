@@ -33,7 +33,7 @@ Communication to and from subagents should be sparse. Communicate primarily thro
 
 6. If this changes the **frontier** of available tickets, kick off more **implementer subagents** to work on the new tickets. This allows for maximum concurrency.
 
-7. Once all tickets are complete, call the Skill tool with `code-review` on the integration branch. Fix all issues raised by the code review in a single **implementer subagent**.
+7. Once all tickets are complete, call the Skill tool with `open-code-review-delegate` on the integration branch: range mode from the branch's base to its tip, with the spec as the review's background. OCR's rules do not read the repo's documented coding standards or check the diff against the spec, so check both alongside it: requirements that are missing or partial, behaviour nobody asked for, and requirements implemented wrongly. Fix all issues raised in a single **implementer subagent**.
 
 8. If a draft PR exists, mark it ready for review. Otherwise, resolve each ticket the way the issue tracker closes work, and report the integration branch.
 
