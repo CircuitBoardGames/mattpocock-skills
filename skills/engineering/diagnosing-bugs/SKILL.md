@@ -127,7 +127,6 @@ If a correct seam exists:
 4. Watch it pass.
 5. Re-run the Phase 1 feedback loop against the original (un-minimised) scenario.
 
-<<<<<<< HEAD
 ### When a second fix fails the same loop — attack the premise
 
 Two failed fixes that share an assumption are evidence against the assumption, not against the fixes. **Do not write a third.**
@@ -139,10 +138,7 @@ Two failed fixes that share an assumption are evidence against the assumption, n
 
 If the census is even across actors, the premise is not the cause: return to Phase 3 with the census as evidence.
 
-## Phase 6 — Cleanup + post-mortem
-=======
 ## Phase 6: Cleanup
->>>>>>> upstream/main
 
 Required before declaring done:
 
