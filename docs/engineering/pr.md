@@ -11,7 +11,7 @@ Type `/pr`, or the agent reaches for it automatically whenever it is writing a P
 | Your situation | Reach for |
 | --- | --- |
 | A branch is ready and needs a body a reviewer can scan | `pr` |
-| The code is written but nobody has reviewed it yet | [code-review](https://aihero.dev/skills-code-review) first, then `pr` |
+| The code is written but nobody has reviewed it yet | [open-code-review-delegate](https://github.com/alibaba/open-code-review) first, then `pr` |
 | The PR is open and review comments are coming back | Nothing in this set yet; `pr` only writes the body |
 
 ## The template
@@ -71,9 +71,9 @@ Not by itself. One user's approach is a standing instruction in the repo's agent
 
 ## Where it fits
 
-`pr` sits between review and retro when the build goes up as a pull request: `to-spec → to-tickets → implement → code-review → pr → retro`. It is model-invoked, so it also fires on its own any time the agent writes a PR body outside that chain.
+`pr` sits between review and retro when the build goes up as a pull request: `to-spec → to-tickets → implement → open-code-review-delegate → pr → retro`. It is model-invoked, so it also fires on its own any time the agent writes a PR body outside that chain.
 
-- [code-review](https://aihero.dev/skills-code-review) runs before it, because a PR body should describe a diff that has already been reviewed.
+- [open-code-review-delegate](https://github.com/alibaba/open-code-review) runs before it, because a PR body should describe a diff that has already been reviewed.
 - [implement](https://aihero.dev/skills-implement) produces the commits the body describes.
 
 [ask-matt](https://aihero.dev/skills-ask-matt) routes across the whole set when you are unsure which skill the situation wants.

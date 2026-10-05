@@ -8,7 +8,7 @@ It changes the environment, not the code. The bug the agent shipped, the file it
 
 You invoke this by typing `/retro`, and the agent won't reach for it on its own.
 
-Reach for it at the end of a session that felt harder than it should have: the agent went looking for something for too long, made a mistake a machine could have caught, or needed information it had no way to get. A smooth session has little to teach; a painful one is where the findings are. If what you want is a verdict on the code the session produced, use [code-review](https://aihero.dev/skills-code-review) instead.
+Reach for it at the end of a session that felt harder than it should have: the agent went looking for something for too long, made a mistake a machine could have caught, or needed information it had no way to get. A smooth session has little to teach; a painful one is where the findings are. If what you want is a verdict on the code the session produced, use [open-code-review-delegate](https://github.com/alibaba/open-code-review) instead.
 
 ## Where the findings land
 
@@ -52,7 +52,7 @@ Usually not, and that's the most common place `retro` pushes back. A line in `CL
 
 **My setup mentions `CODING_STANDARDS.md` and I don't have one. Where does it come from?**
 
-Nothing ships the file. The first time a session turns up a judgement-call rule for the reviewer, `retro` proposes starting it, and once you accept, [code-review](https://aihero.dev/skills-code-review) reads it from then on. Any other standards doc you already keep, such as `CONTRIBUTING.md`, works the same way.
+Nothing ships the file. The first time a session turns up a judgement-call rule for the reviewer, `retro` proposes starting it, and once you accept, the review step in `implement` and `implement-spec` reads it from then on, beside the rules `open-code-review-delegate` resolves. Any other standards doc you already keep, such as `CONTRIBUTING.md`, works the same way.
 
 **How is it different from `improve-codebase-architecture`?**
 
@@ -70,12 +70,12 @@ The input. [improve-codebase-architecture](https://aihero.dev/skills-improve-cod
 `retro` is the last step of the main chain, where the flow looks back at itself:
 
 ```txt
-grill-with-docs → to-spec → to-tickets → implement → code-review → retro
+grill-with-docs → to-spec → to-tickets → implement → open-code-review-delegate → retro
 ```
 
 Run it after a build worth learning from, in the same session or pointed at that session's log. A smooth build can skip it.
 
-- [code-review](https://aihero.dev/skills-code-review) is the reviewer agent `retro` most often tunes: new coding standards land where its Standards axis reads them.
+- [open-code-review-delegate](https://github.com/alibaba/open-code-review) is the reviewer `retro` most often tunes. OCR resolves per-language rules itself; the repo's own coding standards are read by the review step in `implement` and `implement-spec`, which is where a new standard lands.
 - [writing-for-agents](https://aihero.dev/skills-writing-for-agents) sets the writing style for every steering file and skill `retro` proposes, and `retro` loads it before it starts.
 
 [ask-matt](https://aihero.dev/skills-ask-matt) routes across the whole set when you are unsure which skill the situation wants.
