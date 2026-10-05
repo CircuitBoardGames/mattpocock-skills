@@ -1,0 +1,14 @@
+# The org fork's gate. A present .forgejo directory makes the forge run THIS instead of upstream's
+# .github/workflows (release.yml publishes to npm, which this fork does not do).
+name: Gate
+on:
+  pull_request:
+  workflow_dispatch:
+jobs:
+  skill-pack:
+    name: skill-pack (vendored surface)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Skills parse, and no conflict markers
+        run: python3 .forgejo/gate.py
