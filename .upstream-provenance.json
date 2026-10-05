@@ -1,6 +1,6 @@
 {
   "true_upstream": "https://github.com/mattpocock/skills",
   "true_upstream_branch": "main",
-  "last_synced_upstream_sha": "84fdeffd12f2ee307994d1eb6feb48173b6e0502",
+  "last_synced_upstream_sha": "24fe0ef7737efae15c87225755e9f6f5965e4888",
   "note": "Provenance marker for the CircuitBoardGames/ClaudeCode maintainer agent's P2 vendor-sync drift check (docs/agents/maintainer.md Part A.6a). THIS MARKER LIVES ON THE hub BRANCH, which is what the hub vendors; the fork's main tracks upstream. last_synced_upstream_sha is hub's merge-base with true_upstream (the v1.2.3 tip, 84fdeffd, vendored 2026-08-10); advance it in each true-upstream->hub sync PR (merge main into hub, never rebase). Seeded 2026-09-28 (hub#1648). The branch's divergence: tdd's Hollow anti-pattern and diagnosing-bugs' attack-the-premise step (fork PR #1), wizard's committed-wizard rule (fork PR #2); upstream syncs merge around them."
 }
