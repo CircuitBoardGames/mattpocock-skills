@@ -52,13 +52,7 @@ Usually not, and `retro` pushes back on this more than anything else. A line in 
 
 **My setup mentions `CODING_STANDARDS.md` and I don't have one. Where does it come from?**
 
-<<<<<<< ours
-Nothing ships the file. The first time a session turns up a judgement-call rule for the reviewer, `retro` proposes starting it, and once you accept, the review step in `implement` and `implement-spec` reads it from then on, beside the rules `open-code-review-delegate` resolves. Any other standards doc you already keep, such as `CONTRIBUTING.md`, works the same way.
-||||||| base
-Nothing ships the file. The first time a session turns up a judgement-call rule for the reviewer, `retro` proposes starting it, and once you accept, [code-review](https://aihero.dev/skills-code-review) reads it from then on. Any other standards doc you already keep, such as `CONTRIBUTING.md`, works the same way.
-=======
-No skill ships the file. The first time a session finds a judgement-call rule for the reviewer, `retro` proposes to create it. After you accept, [code-review](https://aihero.dev/skills-code-review) reads it. Any other standards doc you already keep, such as `CONTRIBUTING.md`, works the same way.
->>>>>>> theirs
+No skill ships the file. The first time a session finds a judgement-call rule for the reviewer, `retro` proposes to create it. After you accept, the review step in `implement` and `implement-spec` reads it, beside the rules `open-code-review-delegate` resolves. Any other standards doc you already keep, such as `CONTRIBUTING.md`, works the same way.
 
 **How is it different from `improve-codebase-architecture`?**
 
@@ -81,15 +75,7 @@ grill-with-docs → to-spec → to-tickets → implement → open-code-review-de
 
 Run it after a build worth learning from, in the same session or pointed at that session's log. You can skip it after a smooth build.
 
-<<<<<<< ours
-- [open-code-review-delegate](https://github.com/alibaba/open-code-review) is the reviewer `retro` most often tunes. OCR resolves per-language rules itself; the repo's own coding standards are read by the review step in `implement` and `implement-spec`, which is where a new standard lands.
-- [writing-for-agents](https://aihero.dev/skills-writing-for-agents) sets the writing style for every steering file and skill `retro` proposes, and `retro` loads it before it starts.
-||||||| base
-- [code-review](https://aihero.dev/skills-code-review) is the reviewer agent `retro` most often tunes: new coding standards land where its Standards axis reads them.
-- [writing-for-agents](https://aihero.dev/skills-writing-for-agents) sets the writing style for every steering file and skill `retro` proposes, and `retro` loads it before it starts.
-=======
-- [code-review](https://aihero.dev/skills-code-review) is the reviewer agent that `retro` most often tunes. New coding standards go where its Standards axis reads them.
+- [open-code-review-delegate](https://github.com/alibaba/open-code-review) is the reviewer that `retro` most often tunes. OCR resolves per-language rules itself. The repo's own coding standards are read by the review step in `implement` and `implement-spec`, so new coding standards go there.
 - [writing-for-agents](https://aihero.dev/skills-writing-for-agents) sets the writing style for every steering file and skill that `retro` proposes, and `retro` loads it before it starts.
->>>>>>> theirs
 
 [ask-matt](https://aihero.dev/skills-ask-matt) routes across the whole set when you are unsure which skill the situation needs.
