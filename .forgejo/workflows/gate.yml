@@ -5,6 +5,8 @@ on:
   pull_request:
 jobs:
   skill-pack:
+    # A draft never runs this: it runs once un-drafted.
+    if: ${{ !github.event.pull_request.draft }}
     name: skill-pack (vendored surface)
     runs-on: ubuntu-latest
     steps:
