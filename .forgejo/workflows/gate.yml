@@ -3,7 +3,6 @@
 name: Gate
 on:
   pull_request:
-  workflow_dispatch:
 jobs:
   skill-pack:
     name: skill-pack (vendored surface)
